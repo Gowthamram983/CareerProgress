@@ -1,0 +1,16 @@
+clc;
+clear all;
+disp('CALCULATION OF INDUCTANCE OF 3 PHASE UNSYMMETRIC LINE UNTRANSPOSED');
+r=input(' Enter radius in cm:');
+rad=r*10^(-2);
+Dab=input(' Enter distance between conductors A & B in m: ');
+Dbc=input(' Enter distance between conductors B & C in m:');
+Dca=input('Enter distance between conductors C & A in m:');
+r1=rad*0.7788;
+La=2*10^(-7)*(log(1/r1)+log((Dab*Dca)^(1/2))+(3)^(1/2)*j*log((Dab/Dca)^(1/2)));
+Lb=2*10^(-7)*(log(1/r1)+log((Dbc*Dab)^(1/2))+(3)^(1/2)*j*log((Dbc/Dab)^(1/2)));
+Lc=2*10^(-7)*(log(1/r1)+log((Dca*Dbc)^(1/2))+(3)^(1/2)*j*log((Dca/Dbc)^(1/2)));
+disp('INDUCTANCE(in H/m):');
+disp(La);
+disp(Lb);
+disp(Lc);

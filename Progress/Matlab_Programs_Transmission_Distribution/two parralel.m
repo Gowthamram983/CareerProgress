@@ -1,0 +1,12 @@
+clc;
+clear all;
+disp('CALCULATION OF INDUCTANCE AND CAPACI TANCE OF 1 PHASE LINE');
+d=input('Enter diameter in cm:');
+r=d/2;
+rad=r*10^(-2);
+D=input(' Enter distance between conductors in m:');
+r1=rad*0.7788; L=4*10^(-7)*log(D/r1); C=(pi*8.854*10^(-12))/(log(D/rad));
+disp('INDUCTANCE(in H/m):');
+disp(L);
+disp('CAPACITANCE(in F/m):');
+disp(C);
